@@ -29,4 +29,9 @@ by Mark, 2016-01-07 10:00
     git remote add origin https://github.com/youbike2016/youbike2016.git
     git push -u origin master
 ```
-  -  https://github.com/youbike2016/youbike2016, source code, done!
+
+## d:\youbike2016 
+```
+    npm start
+```
+http://localhost:3000/, working!
