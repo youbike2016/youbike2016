@@ -36,6 +36,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <!-- <link href='css/project-taipei-omg-2016.css' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'> -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> --> 
 
 </head>
 
@@ -80,7 +83,7 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
 
-<div class="img-wrap">
+
     <header class="intro-header" style=" background-image: url('img/home-bg.jpg')">
         <div class="container">
             <div class="row">
@@ -94,28 +97,36 @@
             </div>
         </div>
     </header>
-</div>
+
     <!-- Main Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-    <i class="fa fa-search"></i><input ng-model="query">
-<table style='table-layout:fixed' class="table table-bordered table-striped">
+
+
+              <!-- <table style='table-layout:fixed; text-align:center ' class="table table-bordered table-striped"  > -->
+                <table style='table-layout:auto; text-align:center ' class="table table-bordered table-striped"  >
+                  <!-- <table flat-table > -->
+        <tr><td colspan="5">
+  &nbsp;<i class="fa fa-search"></i>&nbsp;&nbsp;<input ng-model="query">
+        </td></tr>
+      <!-- <table   class='flat-table'> -->
 
         <!--    <th><a href="" ng-click="orderByField='sno'; reverseSort = !reverseSort">item</a></th> -->
             <tr>
 <!--  <th bgcolor="azure" style="width:10%; font-size:40%; vertical-align:middle"></th> -->
 
 
-           <th bgcolor="azure" style="width:25%"><a href="" ng-click="orderByField='sarea'; reverseSort = !reverseSort"><i class="fa fa-map"></i></a></th>
+<th bgcolor="azure" style="width:9%; text-align:center"><a href="" ng-click="orderByField='sarea'; reverseSort = !reverseSort"></a></th>
+<th bgcolor="azure" style="width:23%; text-align:center"><a href="" ng-click="orderByField='sarea'; reverseSort = !reverseSort"><i class="fa fa-map"></i></a></th>
 
-            <th  bgcolor="azure" style="width:45%"><a href="" ng-click="orderByField='sbi'; reverseSort = !reverseSort"><i class="fa fa-map-marker"></i></a></th>
+            <th  bgcolor="azure" style="width:50%; text-align:center"><a href="" ng-click="orderByField='sbi'; reverseSort = !reverseSort"><i class="fa fa-map-marker"></i></a></th>
 
 
 
-            <th  bgcolor="azure" style="width:15%"><a href="" ng-click="orderByField='sna'; reverseSort = !reverseSort"><i class="fa fa-bicycle"></i></a></th>
-            <th  bgcolor="azure" style="width:15%"><a href="" ng-click="orderByField='bemp'; reverseSort = !reverseSort"><i class="fa fa-lock"></i></a></th>
+            <th  bgcolor="azure" style="width:9%; text-align:center"><a href="" ng-click="orderByField='sna'; reverseSort = !reverseSort"><i class="fa fa-bicycle"></i></a></th>
+            <th  bgcolor="azure" style="width:9%; text-align:center"><a href="" ng-click="orderByField='bemp'; reverseSort = !reverseSort"><i class="fa fa-lock"></i></a></th>
         </tr>
 
 
@@ -128,6 +139,7 @@
             <tr ng-repeat="msg in messages |  filter:query | orderBy:orderByField:reverseSort" >
                 <!-- <td>{{ msg.sno }}</td> -->
                 <!-- <td>{{ 1+$index }}</td> -->
+                <td style="text-align:center">{{ 1+$index }}</td>
                 <td>{{ msg.sarea }}</td>
                 <td>{{ msg.sna }}</td>
                 <td>{{ msg.sbi }}</td>
