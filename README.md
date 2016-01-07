@@ -2,11 +2,12 @@ by Mark, 2016-01-07 10:00
 
 ## youbike2016 at Firebase
 - [ ] a bigger project
-  - [ ] first subtask #1234
+  - [ ] Login to Firebase using youbike2016@gmail
+    - [ ] Login to Firebase using youbike2016@gmail
   - [ ] follow up subtask #4321
   - [ ] final subtask cc @mention
 - [ ] a separate task
---1 Login to Firebase using youbike2016@gmail
+--1 
 --2 Create youbike2016
     
 https://youbike2016.firebaseio.com/ , db, done! 
