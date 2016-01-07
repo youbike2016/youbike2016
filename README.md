@@ -40,3 +40,14 @@ http://localhost:3000/, working!
     atom .
 ```
 start to code!
+
+## https://youbike2016.firebaseio.com/?page=Auth
+  - [ ] Session Length: 240 months
+  - [ ] get FIREBASE SECRETS
+
+
+##  D:\youbike2016-firebase-token\generate-firebase-token
+```
+    node app
+```
+
