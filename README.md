@@ -21,11 +21,12 @@ by Mark, 2016-01-07 10:00
   - [ ] Create youbike2016
     -  https://github.com/youbike2016/youbike2016, repository ready!
 
+```
     echo # youbike2016 >> README.md
     git init
     git add README.md
     git commit -m "first commit"
     git remote add origin https://github.com/youbike2016/youbike2016.git
     git push -u origin master
-
+```
   -  https://github.com/youbike2016/youbike2016, source code, done!
