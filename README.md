@@ -35,3 +35,8 @@ by Mark, 2016-01-07 10:00
     npm start
 ```
 http://localhost:3000/, working!
+
+```
+    atom .
+```
+start to code!
