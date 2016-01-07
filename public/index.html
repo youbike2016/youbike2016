@@ -131,11 +131,15 @@
             <!--  <th bgcolor="azure" style="width:10%; font-size:40%; vertical-align:middle"></th> -->
 
 
-                            <th bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"></a></th>
+                            <th bgcolor="ff9900" style="width:9%; text-align:center"></th>
                             <th bgcolor="ff9900" style="width:23%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"><i class="material-icons">&#xE55B;</i></a></th>
-                            <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
-                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sna'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
-                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'bemp'; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
+                            <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'sna'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
+                            <!-- <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
+                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'bemp'; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th> -->
+                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = orderBySbi; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
+                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = orderByBemp; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
+
+
                         </tr>
 
 
@@ -220,6 +224,15 @@
           var app = angular.module("sampleApp", ["firebase"]);
           app.controller("SampleCtrl", function ($scope, $firebaseArray) {
             var ref = new Firebase("https://youbike2016.firebaseio.com/retVal");
+
+            $scope.orderBySbi = function(msg){
+                return parseInt(msg.sbi);
+            };
+
+            $scope.orderByBemp = function(msg){
+                return parseInt(msg.bemp);
+            };
+
             // create a synchronized array
             $scope.messages = $firebaseArray(ref);
 
