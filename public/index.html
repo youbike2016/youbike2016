@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Taipei OMG</title>
+    <title>Youbike2016</title>
 
 
 
@@ -52,7 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">謝謝心時代幫忙測試</a>
+                <a class="navbar-brand" href="index.html">Data.Taipei & Taipei OMG</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,12 +64,12 @@
                     <li>
                         <a href="about.html">About</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="post.html">Sample Post</a>
                     </li>
                     <li>
                         <a href="contact.html">Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -79,28 +79,30 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+
+<div class="img-wrap">
+    <header class="intro-header" style=" background-image: url('img/home-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>場站列表</h1>
+                        <h1 style="color:white">YouBike臺北市公共自行車即時資訊</h1>
                         <hr class="small">
-                        <span class="subheading">可以查詢排序看地圖</span>
+                        <span class="subheading" style="color:white">諾得捷思隊</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
+</div>
     <!-- Main Content -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
- 
+
     <i class="fa fa-search"></i><input ng-model="query">
 <table style='table-layout:fixed' class="table table-bordered table-striped">
-        
+
         <!--    <th><a href="" ng-click="orderByField='sno'; reverseSort = !reverseSort">item</a></th> -->
             <tr>
 <!--  <th bgcolor="azure" style="width:10%; font-size:40%; vertical-align:middle"></th> -->
@@ -178,7 +180,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="copyright text-muted">Copyright &copy;  諾得捷思隊 2016</p>
                 </div>
             </div>
         </div>
@@ -197,19 +199,19 @@ var app = angular.module("sampleApp", ["firebase"]);
 
 app.controller("SampleCtrl", function($scope, $firebaseArray) {
   // var ref = new Firebase("https://twcloudwebapp-001.firebaseio.com/messages");
-  var ref = new Firebase("https://youbike2.firebaseio.com/c9");
-  
+  var ref = new Firebase("https://youbike2016.firebaseio.com/retVal");
+
 
   // create a synchronized array
   $scope.messages = $firebaseArray(ref);
 
   // add new items to the array
   // the message is automatically added to our Firebase database!
-  $scope.addMessage = function() {
-    $scope.messages.$add({
-        text: $scope.newMessageText
-    });
-  };
+  // $scope.addMessage = function() {
+  //   $scope.messages.$add({
+  //       text: $scope.newMessageText
+  //   });
+  // };
 
   // click on `index.html` above to see $remove() and $save() in action
 });

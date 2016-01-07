@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+	<meta charset="UTF-8">
+	<title>bus05定時車機資訊</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+               
+
+	<!-- Latest compiled and minified CSS -->
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<!--<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+
+<link href='css/project-taipei-omg-2016.css' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="SampleCtrl" >
+	<div class="container">
+		<!-- <div class="well">Basic Well</div> -->
+		<!--  <div class="jumbotron">-->
+    <!--<h1>bus05定時車機資訊</h1> -->
+    
+
+    <!--<p>https://youbike2.firebaseio.com/</p> -->
+  <!--</div>-->
+	 <div class="row"> 
+
+		<!--<table class="table table-bordered" class='flat-table'>-->
+		<table  class='flat-table'>
+			 <caption  style="border-radius:10px 10px 10px 10px;"><h2><a style="color:white"  href="index.html">【首頁】</a>&nbsp; &nbsp; bus05定時車機資訊</h2></caption>
+			<tr  ><td style="border-radius:10px 10px 10px 10px;" colspan="8">
+				快速查找：<input ng-model="query">&nbsp; &nbsp; &nbsp; 
+				資料來源：<a style="color:black" href="http://transportation-data.taipei" target="_blank">臺北市政府開放資料</a> ，
+				<a style="color:black" href="https://drive.google.com/file/d/0BzL9ldn5Fg6dcVZ3eUgybkdiTXc/view" target="_blank">資料說明</a>
+				
+			</td></tr>
+			
+		<!-- 	<th><a href="" ng-click="orderByField='sno'; reverseSort = !reverseSort">item</a></th> -->
+			<tr></tr><th></th>
+			<th><a style="color:white" href="" ng-click="orderByField='BusID'; reverseSort = !reverseSort">公車車牌號碼</a></th>
+			<th><a style="color:white" href="" ng-click="orderByField='CarType'; reverseSort = !reverseSort">車輛類型</a></th>
+			<th><a style="color:white" href="" ng-click="orderByField='Azimuth'; reverseSort = !reverseSort">行車方位角</a></th>
+			<th>路線圖</th>
+
+			<th><a  style="color:white" href="" ng-click="orderByField='Latitude'; reverseSort = !reverseSort">經度</a></th>
+
+
+
+			<th><a  style="color:white" href="" ng-click="orderByField='Longitude'; reverseSort = !reverseSort">緯度</a></th>
+			<th><a  style="color:white" href="" ng-click="orderByField='DataTime'; reverseSort = !reverseSort">本筆資料觸發時間</a></th>
+			</tr>
+
+
+
+		<!-- 	<th><a href="" ng-click="orderByField='mday'; reverseSort = !reverseSort">update</a></th>
+			<th><a href="" ng-click="orderByField='act'; reverseSort = !reverseSort">狀態 </a></th> -->
+			 	<!-- <th>update</th>  -->
+
+			<tr ng-repeat="msg in messages |  filter:query | orderBy:orderByField:reverseSort" >
+				<!-- <td>{{ msg.sno }}</td> -->
+				<th>{{ 1+$index }}</th>
+				<td>{{ msg.BusID}}</td>
+				<td>{{ msg.CarType}}</td>
+				<td>{{ msg.Azimuth}}</td>
+				<td><a href='http://e-bus.taipei.gov.tw/newmap/Tw/ManualRouteMap?rid={{ msg.RouteID}}'>路線圖</a></td>
+				<td>{{ msg.Latitude }}</td>
+				<td>{{ msg.Longitude }}</td>
+				<!--<td>{{ msg.DataTime.replace("/Date(","").replace("+0800)/","") | date:'yyyy-MM-dd HH:mm:ss Z' }}</td>-->
+				<td>{{ msg.DataTime.replace("/Date(","").replace("+0800)/","") | date:'MM/dd HH:mm:ss' }}</td>
+				<!-- <td>{{ msg.mday}}</td> -->
+			<!-- 	<td>{{ msg.mday.substring(4, 6) }}/{{ msg.mday.substring(6, 8) }} {{ msg.mday.substring(8, 10) }}:{{ msg.mday.substring(10, 12) }}:{{ msg.mday.substring(12, 14) }}</td> -->
+
+	<!-- 	<td>{{ msg.mday.substring(8, 10) }}:{{ msg.mday.substring(10, 12) }}:{{ msg.mday.substring(12, 14) }}</td>
+
+				<td>{{ msg.act }}</td> -->
+
+			</tr>
+		</table>
+	 </div> 
+	</div>
+
+	<!-- 	<ul>
+			<li ng-repeat="msg in messages">
+				【{{ msg.sno }}】 {{ msg.sna }}</strong><br>【{{ msg.sarea }}】{{ msg.ar }} <br>【可借】{{ msg.sbi }}　【可還】{{ msg.bemp }} 【格數】{{ msg.tot }}<br>【更新時間】{{ msg.mday.substring(4, 6) }}/{{ msg.mday.substring(6, 8) }} {{ msg.mday.substring(8, 10) }}:{{ msg.mday.substring(10, 12) }}:{{ msg.mday.substring(12, 14) }} 【可用狀態】{{ msg.act }}
+				<!-- edit a message -->
+				<!-- <input ng-model="message.text" ng-change="messages.$save(message)" /> -->
+
+				<!-- delete a message -->
+				<!-- <button ng-click="messages.$remove(message)">Delete Message</button> 
+			</li>
+		</ul> -->
+
+		<!-- push a new message onto the array -->
+<!--     <form ng-submit="addMessage()">
+      <input ng-model="newMessageText" />
+      <button type="submit">Add Message</button>
+  </form> -->
+</body>
+<script>
+  /*global angular*/
+var app = angular.module("sampleApp", ["firebase"]);
+
+app.controller("SampleCtrl", function($scope, $firebaseArray) {
+  // var ref = new Firebase("https://twcloudwebapp-001.firebaseio.com/messages");
+  //https://taipei-omg-2016.firebaseio.com/bus05定時車機資訊
+  /*global Firebase*/
+  var ref = new Firebase("https://taipei-omg-2016.firebaseio.com/bus05%E5%AE%9A%E6%99%82%E8%BB%8A%E6%A9%9F%E8%B3%87%E8%A8%8A/BusInfo");
+  
+
+  // create a synchronized array
+  $scope.messages = $firebaseArray(ref);
+
+  // add new items to the array
+  // the message is automatically added to our Firebase database!
+  $scope.addMessage = function() {
+  	$scope.messages.$add({
+  		text: $scope.newMessageText
+  	});
+  };
+
+  // click on `index.html` above to see $remove() and $save() in action
+});
+</script>
+</html>
