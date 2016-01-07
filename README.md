@@ -3,7 +3,6 @@ by Mark, 2016-01-07 10:00
 ## youbike2016 at Firebase
 
 1) Login to Firebase using youbike2016@gmail
-
 2) Create youbike2016
     
 https://youbike2016.firebaseio.com/ , db, done! 
