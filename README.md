@@ -1,23 +1,20 @@
 by Mark, 2016-01-07 10:00
 
-## youbike2016 at Firebase
-- [ ] Firebase
+## https://www.firebase.com/
+
   - [ ] Login youbike2016@gmail.com
   - [ ] Create youbike2016
-    - [ ] https://youbike2016.firebaseio.com/, db, done! 
-    - [ ] https://youbike2016.firebaseapp.com, app, done! 
+    -  https://youbike2016.firebaseio.com/, db, done! 
+    -  https://youbike2016.firebaseapp.com, app, done! 
     
-  - [ ] follow up subtask #4321
-  - [ ] final subtask cc @mention
-- [ ] a separate task
---1 
---2 Create youbike2016
-    
-https://youbike2016.firebaseio.com/ , db, done! 
+## d:\youbike2016 
 
-h
-
-## youbike2016 at d:\
+  - [ ] firebase logout
+  - [ ] firebase login
+  - [ ] firebase init -f youbike2016
+    - copy node+bootstrap project
+  - [ ] firebase deploy 
+    - https://youbike2016.firebaseapp.com, static web working
 
 
     > firebase logout
