@@ -130,8 +130,8 @@
                           <th bgcolor="ff9900" style="width:9%; text-align:center"></a></th>
                           <th bgcolor="ff9900" style="width:23%; text-align:center"><a href="" ng-click="orderByField = 'sareaen'; reverseSort = !reverseSort"><i class="material-icons">&#xE55B;</i></a></th>
                           <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'snaen'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
-                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
-                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'bemp'; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = orderBySbi; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = orderByBemp; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
                         </tr>
 
 
@@ -217,7 +217,16 @@
           app.controller("SampleCtrl", function ($scope, $firebaseArray) {
             var ref = new Firebase("https://youbike2016.firebaseio.com/retVal");
             // create a synchronized array
+
+            $scope.orderBySbi = function(msg){
+                return parseInt(msg.sbi);
+            };
+
+            $scope.orderByBemp = function(msg){
+                return parseInt(msg.bemp);
+            };
             $scope.messages = $firebaseArray(ref);
+
 
 
           });
