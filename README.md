@@ -8,8 +8,8 @@
 2) Create youbike2016
     
     
-    https://youbike2016.firebaseio.com/
-    https://youbike2016.firebaseapp.com
+https://youbike2016.firebaseio.com/ , db, done! 
+https://youbike2016.firebaseapp.com , app, done!
 
 ## youbike2016 at d:\
 
@@ -23,6 +23,7 @@
     > npm start
     ## http://localhost:3000/ --- working
     
+## create youbike2016 at github
     
     echo # youbike2016 >> README.md
     git init
@@ -30,6 +31,6 @@
     git commit -m "first commit"
     git remote add origin https://github.com/youbike2016/youbike2016.git
     git push -u origin master
-    
-## create youbike2016 at github
+
+https://github.com/youbike2016/youbike2016, source code, done!
     
