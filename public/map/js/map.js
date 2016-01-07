@@ -51,8 +51,8 @@ function initialize() {
 
   var adj_title=decodeURIComponent(params.sna);
   // adj_title="&nbsp&nbsp&nbsp&nbsp"+adj_title;
-  
-  
+
+
   // InfoWindow content
   var content = '<div id="iw-container">' ;
   content +=             '<div class="iw-title">'+adj_title+'</div>' ;
@@ -60,11 +60,16 @@ function initialize() {
   // content +=         '<div class="iw-subTitle">'+'History</div>' ;
       // content += "<h3>可借車數："+params.sbi+"</h3>";
       // content += "<h3>可還格數："+params.bemp+"</h3>";
-       content += "<b>可借："+params.sbi+"</b><br>";
-       content += "<b>可還："+params.bemp+"</b><br><br>";
+      content += '  <i class="material-icons">&#xE52F;</i>';// bike
+      content += "&nbsp;：<b>"+params.sbi+"</b><br>";
+    //  content += "<b>可借："+params.sbi+"</b><br>";
+    //  content+='<br<i class="material-icons">lock</i>';
+    content += '<br> <i class="material-icons">&#xE897;</i>';//lock
+
+       content += "：<b>"+params.bemp+"</b><br><br>";
       content += ""+mday_v2+"";
       // content += "<br>資料時間：<br>"+mday_v2+"";
-       
+
   // content +=         '<img src="images/vistalegre.jpg" alt="Porcelain Factory of Vista Alegre" height="115" width="83">' ;
   // content +=         '<p>Founded in 1824, the Porcelain Factory of Vista Alegre was the first industrial unit dedicated to porcelain production in Portugal. For the foundation and success of this risky industrial development was crucial the spirit of persistence of its founder, José Ferreira Pinto Basto. Leading figure in Portuguese society of the nineteenth century farm owner, daring dealer, wisely incorporated the liberal ideas of the century, having become "the first example of free enterprise" in Portugal.</p>' ;
   // content +=           '<div class="iw-subTitle">Contacts</div>' ;
@@ -82,7 +87,7 @@ function initialize() {
     // greater control over the various content elements
     maxWidth: 350
   });
-  
+
   // marker options
   var marker = new google.maps.Marker({
     position: factory,
@@ -100,8 +105,8 @@ function initialize() {
   google.maps.event.addListener(map, 'click', function() {
     infowindow.close();
   });
-  
-  
+
+
   // by Mark, 1/6 15:31, Let it open when open this map page
   infowindow.open(map,marker);
   // *

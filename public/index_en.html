@@ -39,7 +39,6 @@
         <!-- <link href='css/project-taipei-omg-2016.css' rel='stylesheet' type='text/css'> -->
         <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'> -->
         <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
-
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
     </head>
@@ -95,7 +94,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="site-heading">
-                            <h1 style="color:white">YouBike臺北市公共自行車即時資訊</h1>
+                            <h1 style="color:white">YouBike Taipei public bike real-time info</h1>
                             <hr class="small">
                             <span class="subheading" style="color:white">諾得捷思隊</span>
                         </div>
@@ -128,14 +127,11 @@
 
         <!--    <th><a href="" ng-click="orderByField='sno'; reverseSort = !reverseSort">item</a></th> -->
                         <tr>
-            <!--  <th bgcolor="azure" style="width:10%; font-size:40%; vertical-align:middle"></th> -->
-
-
-                            <th bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"></a></th>
-                            <th bgcolor="ff9900" style="width:23%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"><i class="material-icons">&#xE55B;</i></a></th>
-                            <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
-                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sna'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
-                            <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'bemp'; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
+                          <th bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"></a></th>
+                          <th bgcolor="ff9900" style="width:23%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"><i class="material-icons">&#xE55B;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sna'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'bemp'; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
                         </tr>
 
 
@@ -148,12 +144,12 @@
                         <tr ng-repeat="msg in messages|  filter:query | orderBy:orderByField:reverseSort" >
                             <!-- <td>{{ msg.sno }}</td> -->
                             <!-- <td>{{ 1+$index }}</td> -->
-                            <td  bgcolor="ff9900" style="color:white; text-align:center ;vertical-align:middle;">{{ 1 + $index}}</td>
-                            <td>{{ msg.sarea}}</td>
-                            <td>{{ msg.sna}}</td>
+                            <td  bgcolor="ff9900"  style="color:white;text-align:center;vertical-align:middle; ">{{ 1 + $index}}</td>
+                            <td>{{ msg.sareaen}}</td>
+                            <td>{{ msg.snaen}}</td>
                             <td>{{ msg.sbi}}</td>
                             <td>{{ msg.bemp}}</td>
-                            <td><a  target="_blank" href="map/map.html?lat={{ msg.lat }}&lon={{ msg.lng }}&sno={{ msg.sno }}&sna={{ msg.sna }}&snaen={{ msg.snaen }}&sbi={{ msg.sbi }}&bemp={{ msg.bemp }}&mday={{ msg.mday }}">地圖</a></td>
+                            <td><a  target="_blank" href="map/map.html?lat={{ msg.lat }}&lon={{ msg.lng }}&sno={{ msg.sno }}&sna={{ msg.snaen }}&sbi={{ msg.sbi }}&bemp={{ msg.bemp }}&mday={{ msg.mday }}">Map</a></td>
                             <!-- <td>{{ msg.mday}}</td> -->
                         <!--    <td>{{ msg.mday.substring(4, 6) }}/{{ msg.mday.substring(6, 8) }} {{ msg.mday.substring(8, 10) }}:{{ msg.mday.substring(10, 12) }}:{{ msg.mday.substring(12, 14) }}</td> -->
 
