@@ -16,18 +16,11 @@ by Mark, 2016-01-07 10:00
   - [ ] firebase deploy 
     - https://youbike2016.firebaseapp.com, static web working
 
+## https://github.com/
+  - [ ] Login youbike2016@gmail.com
+  - [ ] Create youbike2016
+    -  https://github.com/youbike2016/youbike2016, repository ready!
 
-    > firebase logout
-    > firebase login
-    > firebase init -f youbike2016
-    ## copy node+bootstrap project to d:\youbike2016
-    > firebase deploy
-    ## https://youbike2016.firebaseapp.com --- working
-    > npm start
-    ## http://localhost:3000/ --- working
-    
-## create youbike2016 at github
-    
     echo # youbike2016 >> README.md
     git init
     git add README.md
@@ -35,5 +28,4 @@ by Mark, 2016-01-07 10:00
     git remote add origin https://github.com/youbike2016/youbike2016.git
     git push -u origin master
 
-https://github.com/youbike2016/youbike2016, source code, done!
-    
+  -  https://github.com/youbike2016/youbike2016, source code, done!
