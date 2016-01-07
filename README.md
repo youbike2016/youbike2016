@@ -54,22 +54,10 @@ start to code!
 ## D:\youbike2016-firebase>node server
 ```
     node server
-    
-    
-    === Year 2016 ===
-  url_source=http://data.taipei/youbike
-  url_target=https://youbike2016.firebaseio.com/
-=================
-步驟一, login to firebase
-步驟二, 定時將資料由 Taipei Opendata 搬到 Firebase
-  ... Authentication Failed! { [Error: INVALID_TOKEN: Failed to validate MAC.] code: 'INVALID_TOKEN' }
-...going to update firebase, 2016-01-07 03:50:30, cnt=1
-...Synchronization succeeded!
-...going to update firebase, 2016-01-07 03:51:00, cnt=2
-...Synchronization succeeded!
-...going to update firebase, 2016-01-07 03:51:30, cnt=3
-...Synchronization succeeded!
-...going to update firebase, 2016-01-07 03:52:00, cnt=4
-...Synchronization succeeded!
 
 ```
+
+## GitHbu Desktop
+
+  - [ ] logout
+  - [ ] login youbike2016@gmail.com
