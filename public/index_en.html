@@ -127,10 +127,10 @@
 
         <!--    <th><a href="" ng-click="orderByField='sno'; reverseSort = !reverseSort">item</a></th> -->
                         <tr>
-                          <th bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"></a></th>
-                          <th bgcolor="ff9900" style="width:23%; text-align:center"><a href="" ng-click="orderByField = 'sarea'; reverseSort = !reverseSort"><i class="material-icons">&#xE55B;</i></a></th>
-                          <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
-                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sna'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
+                          <th bgcolor="ff9900" style="width:9%; text-align:center"></a></th>
+                          <th bgcolor="ff9900" style="width:23%; text-align:center"><a href="" ng-click="orderByField = 'sareaen'; reverseSort = !reverseSort"><i class="material-icons">&#xE55B;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:50%; text-align:center"><a href="" ng-click="orderByField = 'snaen'; reverseSort = !reverseSort"><i class="material-icons">&#xE55F;</i></a></th>
+                          <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'sbi'; reverseSort = !reverseSort"><i class="material-icons">&#xE52F;</i></a></th>
                           <th  bgcolor="ff9900" style="width:9%; text-align:center"><a href="" ng-click="orderByField = 'bemp'; reverseSort = !reverseSort"> <i class="material-icons">&#xE897;</i></a></th>
                         </tr>
 
@@ -221,7 +221,12 @@
 
 
           });
+          //
+          // $scope.convertToInt= function (value) {
+          //   return parseInt(value);
+          // };
 
+          //
           var ref3=new Firebase("https://youbike2016.firebaseio.com/retVal");
           ref3.on('value', function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
